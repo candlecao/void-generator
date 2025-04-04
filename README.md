@@ -1,5 +1,5 @@
 # A genearl introduction of "VoID-generator"
-1. VoID stands for "Vocabulary of Interlinked Datasets". It is a specification for describing the metadata of RDF datasets. For example, in our LinkedMusic datalake, there are various RDF graphs in one SPARQL endpoint. VoID can serve to describe the metadata for the different graphs and their interrelationships. This is useful for managing our datalake as well as play a role in the workflow to faciliate NLQ2SPARQL using LLMs, particularly to generate "federated SPARQL query" (across different databases). 
+1. VoID stands for "Vocabulary of Interlinked Datasets". It is a specification for describing the metadata of RDF datasets. For example, in our LinkedMusic datalake, various RDF graphs reside within one single SPARQL endpoint. VoID helps describe metadata for the different graphs and their interrelationships, aiding in datalake management and supporting NLQ2SPARQL workflows with LLMs, particularly for generating "federated SPARQL queries" (across different databases). 
 2. This is transferred from https://github.com/JervenBolleman/void-generator, which is referenced from the paper _LLM-based SPARQL Query Generation from Natural Language over Federated Knowledge Graphs_ (https://arxiv.org/abs/2410.06062).
 
 [Junjun Cao (junjun.cao@mail.mcgill.ca) commented]
