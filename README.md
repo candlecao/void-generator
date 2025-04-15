@@ -55,8 +55,11 @@ java -jar target/void-generator-*-uber.jar -r https://sparql.wikipathways.org/sp
 
 ## 3. For LinkedMusic, taking our https://virtuoso.staging.simssa.ca/sparql as an example
 
-If on our staging virtuoso, https://virtuoso.staging.simssa.ca/sparql, there are many ...
+If on our staging virtuoso, https://virtuoso.staging.simssa.ca/sparql, there are many different graphs, if you want to extract ontology for any given graph, please see this simple example:
 
+### 3.1 prepare a simple example RDF data and a corresponding ontology
+See the folder "simpleExampleData"
+I have already uploaded "instanceToTestVoid.ttl"
 
 
 ## What about all the options?
