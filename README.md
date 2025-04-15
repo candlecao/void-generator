@@ -25,7 +25,7 @@ java -jar target/void-generator-*uber.jar --help
 ```
 
 
-## Running against a local Virtuoso endpoint
+## 1. Running against a local Virtuoso endpoint
 
 ```sh
 java -jar target/void-generator-*uber.jar \
@@ -39,7 +39,7 @@ java -jar target/void-generator-*uber.jar \
 
 The IRI is supposed to be the URL of the published location of the void file/service description.
 
-### Running against a regular SPARQL endpoint
+## 2. Running against a regular SPARQL endpoint
 
 For any endpoint supporting the SPARQL protocol.
 
@@ -52,6 +52,12 @@ java -jar target/void-generator-*-uber.jar -r https://sparql.wikipathways.org/sp
    --iri-of-void 'https://rdf.wikipathway.org/.well-known/void#' \
    -g http://rdf.wikipathways.org/
 ```
+
+## 3. For LinkedMusic, taking our https://virtuoso.staging.simssa.ca/sparql as an example
+
+If on https://virtuoso.staging.simssa.ca/sparql, there are many ...
+
+
 
 ## What about all the options?
 
