@@ -55,7 +55,7 @@ java -jar target/void-generator-*-uber.jar -r https://sparql.wikipathways.org/sp
 
 ## 3. For LinkedMusic, taking our https://virtuoso.staging.simssa.ca/sparql as an example
 
-If on https://virtuoso.staging.simssa.ca/sparql, there are many ...
+If on our staging virtuoso, https://virtuoso.staging.simssa.ca/sparql, there are many ...
 
 
 
