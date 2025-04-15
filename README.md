@@ -59,8 +59,33 @@ If on our staging virtuoso, https://virtuoso.staging.simssa.ca/sparql, there are
 
 ### 3.1 prepare a simple example RDF data and a corresponding ontology
 See the folder "simpleExampleData"
-I have already uploaded "instanceToTestVoid.ttl"
 
+I have already uploaded "instanceToTestVoid.ttl" to our staging Virtuoso with a graph name "http://testVoid"
+
+I executed on terminal:
+```sh
+java -jar target/void-generator-*uber.jar \
+   -r https://virtuoso.staging.simssa.ca/sparql \
+   -p https://virtuoso.staging.simssa.ca/sparql \
+   --void-file void-test.ttl \
+   --iri-of-void 'https://virtuoso.staging.simssa.ca/.well-known/void#' \
+   -g http://testVoid
+```
+It then generated a void-test.ttl file
+
+Uploaded this back to our staging Virtuoso with a graph name "http://testVoid/voidGenerated"
+
+Then query against the graph with the SPARQL in the end of this README.md file, you can get result, such as that in json format:
+
+```json
+{ "head": { "link": [], "vars": ["subjectClass", "prop", "objectClass", "objectDatatype"] },
+  "results": { "distinct": false, "ordered": true, "bindings": [
+    { "subjectClass": { "type": "uri", "value": "http://example.org/Book" }	, "prop": { "type": "uri", "value": "http://example.org/hasAuthor" }	, "objectClass": { "type": "uri", "value": "http://example.org/Author" }},
+    { "subjectClass": { "type": "uri", "value": "http://example.org/Book" }	, "prop": { "type": "uri", "value": "http://example.org/publicationYear" }	, "objectDatatype": { "type": "uri", "value": "http://www.w3.org/2001/XMLSchema#integer" }},
+    { "subjectClass": { "type": "uri", "value": "http://example.org/Author" }	, "prop": { "type": "uri", "value": "http://example.org/birthYear" }	, "objectDatatype": { "type": "uri", "value": "http://www.w3.org/2001/XMLSchema#integer" }},
+    { "subjectClass": { "type": "uri", "value": "http://example.org/Book" }	, "prop": { "type": "uri", "value": "http://example.org/title" }	, "objectDatatype": { "type": "uri", "value": "http://www.w3.org/2001/XMLSchema#string" }},
+    { "subjectClass": { "type": "uri", "value": "http://example.org/Author" }	, "prop": { "type": "uri", "value": "http://example.org/name" }	, "objectDatatype": { "type": "uri", "value": "http://www.w3.org/2001/XMLSchema#string" }} ] } }
+```
 
 ## What about all the options?
 
