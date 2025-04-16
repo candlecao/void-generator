@@ -1,0 +1,154 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix : <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void_ext: <http://ldf.fi/void-ext#> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://virtuoso.staging.simssa.ca/sparql> a :Service;
+  :defaultDataset <https://virtuoso.staging.simssa.ca/sparql#sparql-default-dataset>;
+  :endpoint <https://virtuoso.staging.simssa.ca/sparql>;
+  :resultFormat formats:SPARQL_Results_CSV, formats:SPARQL_Results_JSON, formats:N-Triples,
+    formats:RDF_XML, formats:SPARQL_Results_TSV, formats:Turtle, formats:SPARQL_Results_XML;
+  :supportedLanguage :SPARQL11Query;
+  :feature :UnionDefaultGraph, :BasicFederatedQuery;
+  :availableGraphs _:13aa5f40b4c74ede80046f94ce58270214 .
+
+<https://virtuoso.staging.simssa.ca/sparql#sparql-default-dataset> a :Dataset;
+  :defaultGraph <https://virtuoso.staging.simssa.ca/.well-known/void##sparql-default-graph>;
+  :namedGraph <http://testVoid> .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void##sparql-default-graph> a :Graph;
+  void:triples "19"^^xsd:long;
+  void:distinctObjects "3983289"^^xsd:long;
+  void_ext:distinctLiterals "3983289"^^xsd:long;
+  void:distinctSubjects "3598153"^^xsd:long;
+  void_ext:distinctIRIReferenceSubjects "3458769"^^xsd:long;
+  void_ext:distinctBlankNodeSubjects "139384"^^xsd:long .
+
+_:13aa5f40b4c74ede80046f94ce58270214 :namedGraph <http://testVoid> .
+
+<http://testVoid> a :NamedGraph;
+  :name <http://testVoid>;
+  :graph <https://virtuoso.staging.simssa.ca/.well-known/void##_graph_testVoid!2f4b2aac>;
+  void:subset <https://virtuoso.staging.simssa.ca/.well-known/void##linkset_fdd2ee1c> .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void##_graph_testVoid!2f4b2aac> a
+    :Graph;
+  void:triples "19"^^xsd:long;
+  void:classes "2"^^xsd:long;
+  void:classPartition <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!1fcde163!Author>,
+    <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!ab670989!Book>;
+  void:propertyPartition <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!0bff9de2!birthYear>,
+    <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!62fe59ea!hasAuthor>,
+    <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!1c981b10!name>, <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!c63e87b8!publicationYear>,
+    <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!84acb23f!title>, <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!c74e2b73!type>;
+  void:distinctObjects "10"^^xsd:long;
+  void_ext:distinctLiterals "10"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!1fcde163!Author> a void:Dataset;
+  void:class <http://example.org/Author>;
+  void:entities "2"^^xsd:long;
+  void:propertyPartition <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!59768e81!-Author-birthYear>,
+    <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!ab000093!-Author-name> .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!59768e81!-Author-birthYear>
+  a void:Dataset;
+  void:property <http://example.org/birthYear>;
+  void_ext:datatypePartition <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!4ccec738!-birthYear-integer>;
+  void:triples "2"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!4ccec738!-birthYear-integer>
+  a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!ab000093!-Author-name>
+  a void:Dataset;
+  void:property <http://example.org/name>;
+  void_ext:datatypePartition <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!d07baa97!-name-string>;
+  void:triples "2"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!d07baa97!-name-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!ab670989!Book> a void:Dataset;
+  void:class <http://example.org/Book>;
+  void:entities "3"^^xsd:long;
+  void:propertyPartition <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!d0bad1d0!-Book-hasAuthor>,
+    <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!2653f467!-Book-publicationYear>,
+    <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!88343d14!-Book-title> .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!d0bad1d0!-Book-hasAuthor>
+  a void:Dataset;
+  void:property <http://example.org/hasAuthor>;
+  void:classPartition <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!99589739!-Book-hasAuthor-Author>;
+  void:triples "4"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!99589739!-Book-hasAuthor-Author>
+  a void:Dataset;
+  void:class <http://example.org/Author>;
+  void:triples "4"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void##linkset_fdd2ee1c> a void:Linkset;
+  void:linkPredicate <http://example.org/hasAuthor>;
+  void:subjectsTarget <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!ab670989!Book>;
+  void:objectsTarget <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!1fcde163!Author> .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!2653f467!-Book-publicationYear>
+  a void:Dataset;
+  void:property <http://example.org/publicationYear>;
+  void_ext:datatypePartition <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!abc2e176!-publicationYear-integer>;
+  void:triples "3"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!abc2e176!-publicationYear-integer>
+  a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!88343d14!-Book-title>
+  a void:Dataset;
+  void:property <http://example.org/title>;
+  void_ext:datatypePartition <https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!8c388320!-title-string>;
+  void:triples "3"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!8c388320!-title-string>
+  a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!0bff9de2!birthYear>
+  void:property <http://example.org/birthYear>;
+  void:triples "2"^^xsd:long;
+  void:distinctSubjects "2"^^xsd:long;
+  void:distinctObjects "2"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!62fe59ea!hasAuthor>
+  void:property <http://example.org/hasAuthor>;
+  void:triples "4"^^xsd:long;
+  void:distinctSubjects "3"^^xsd:long;
+  void:distinctObjects "2"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!1c981b10!name> void:property
+    <http://example.org/name>;
+  void:triples "2"^^xsd:long;
+  void:distinctSubjects "2"^^xsd:long;
+  void:distinctObjects "2"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!c63e87b8!publicationYear>
+  void:property <http://example.org/publicationYear>;
+  void:triples "3"^^xsd:long;
+  void:distinctSubjects "3"^^xsd:long;
+  void:distinctObjects "3"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!84acb23f!title> void:property
+    <http://example.org/title>;
+  void:triples "3"^^xsd:long;
+  void:distinctSubjects "3"^^xsd:long;
+  void:distinctObjects "3"^^xsd:long .
+
+<https://virtuoso.staging.simssa.ca/.well-known/void#testVoid!c74e2b73!type> void:property
+    rdf:type;
+  void:triples "5"^^xsd:long;
+  void:distinctSubjects "5"^^xsd:long;
+  void:distinctObjects "2"^^xsd:long .

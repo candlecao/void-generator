@@ -1,0 +1,29 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Authors
+ex:author1 rdf:type ex:Author ;
+           ex:name "Jane Doe" ;
+           ex:birthYear "1980"^^<http://www.w3.org/2001/XMLSchema#integer> .
+
+ex:author2 rdf:type ex:Author ;
+           ex:name "John Smith" ;
+           ex:birthYear "1975"^^<http://www.w3.org/2001/XMLSchema#integer> .
+
+# Books
+ex:book1 rdf:type ex:Book ;
+         ex:title "Introduction to RDF" ;
+         ex:publicationYear "2020"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+         ex:hasAuthor ex:author1 .
+
+ex:book2 rdf:type ex:Book ;
+         ex:title "OWL Fundamentals" ;
+         ex:publicationYear "2022"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+         ex:hasAuthor ex:author2 .
+
+ex:book3 rdf:type ex:Book ;
+         ex:title "Semantic Web Technologies" ;
+         ex:publicationYear "2023"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+         ex:hasAuthor ex:author1 ;
+         ex:hasAuthor ex:author2 .
