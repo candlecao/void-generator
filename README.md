@@ -59,16 +59,18 @@ java -jar target/void-generator-*-uber.jar -r https://sparql.wikipathways.org/sp
    -g http://rdf.wikipathways.org/
 ```
 
-## 3. For LinkedMusic, taking our https://virtuoso.staging.simssa.ca/sparql as an example
+## 3. For "LinkedMusic", taking our ->
+https://virtuoso.staging.simssa.ca/sparql as an example
 
-If on our staging virtuoso, https://virtuoso.staging.simssa.ca/sparql, there are many different graphs, if you want to extract ontology for any given graph, please see this simple example:
+If working with our staging virtuoso with its SPARQL endpoint https://virtuoso.staging.simssa.ca/sparql, which contains many different graphs, and you would like to extract ontology for a specific RDF graph, please refer to the following simple example:
 
-### 3.1 prepare a simple example RDF data and a corresponding ontology
-See the folder "simpleExampleData"
+### 3.1 Prepare a simple example RDF data and a corresponding ontology
+See the folder "simpleExampleData" which contains a set of RDF instance data (A-box) and its corresponding ontology (or T-box)
 
 I have already uploaded "instanceToTestVoid.ttl" to our staging Virtuoso with a graph name "http://testVoid"
 
-I executed on terminal:
+### 3.2 Void Generator Execution
+The following shell command was executed in the macOC terminal to run the VOID Generator:
 ```sh
 java -jar target/void-generator-*uber.jar \
    -r https://virtuoso.staging.simssa.ca/sparql \
@@ -77,11 +79,12 @@ java -jar target/void-generator-*uber.jar \
    --iri-of-void 'https://virtuoso.staging.simssa.ca/.well-known/void#' \
    -g http://testVoid
 ```
-It then generated a void-test.ttl file
+It then generated a void-test.ttl file in the local repository
 
-Uploaded this back to our staging Virtuoso with a graph name "http://testVoid/voidGenerated"
+### 3.3 Retrieve context as prompt from VOID
+The generated void-test.ttl file was then uploaded back to the staging Virtuoso instance with a graph name "http://testVoid/voidGenerated"
 
-Then query against the graph with the SPARQL in the end of this README.md file, you can get result, such as that in json format:
+Then query against the graph with the SPARQL at the end of this README.md file, you can get result, such as the following represented in json format (or some other formats you specify at the SPARQL endpoint):
 
 ```json
 { "head": { "link": [], "vars": ["subjectClass", "prop", "objectClass", "objectDatatype"] },
@@ -92,6 +95,8 @@ Then query against the graph with the SPARQL in the end of this README.md file, 
     { "subjectClass": { "type": "uri", "value": "http://example.org/Book" }	, "prop": { "type": "uri", "value": "http://example.org/title" }	, "objectDatatype": { "type": "uri", "value": "http://www.w3.org/2001/XMLSchema#string" }},
     { "subjectClass": { "type": "uri", "value": "http://example.org/Author" }	, "prop": { "type": "uri", "value": "http://example.org/name" }	, "objectDatatype": { "type": "uri", "value": "http://www.w3.org/2001/XMLSchema#string" }} ] } }
 ```
+Refer to promptForConvertingVOID_toOntology.md, by providing which to LLMs, the ontology in OWL format can be generated
+
 
 ## What about all the options?
 
