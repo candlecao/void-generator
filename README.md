@@ -42,6 +42,17 @@ java -jar target/void-generator-*uber.jar \
     -s void-file-locally-stored.ttl \
     -i "https://YOUR_SPARQL_ENDPOINT/.well-known/void"
 ```
+E.g., If you store TheSession database as a named graph "http://theSession" in your local Open Link Virtuoso (SPARQL endpoint: http://localhost:8890/sparql), and if you want to know the VOID info of only such graph, you may run such script:
+```sh
+java -jar target/void-generator-*uber.jar \
+    --user dba \
+    --password dba \
+    --virtuoso-jdbc=jdbc:virtuoso://localhost:1111/charset=UTF-8 \
+    -r "http://localhost:8890/sparql" \
+    -s void-specific-graph.ttl \
+    -i "http://localhost:8890/.well-known/void" \
+    -g "http://theSession"
+```
 
 The IRI is supposed to be the URL of the published location of the void file/service description.
 
@@ -81,10 +92,10 @@ java -jar target/void-generator-*uber.jar \
 ```
 It then generated a void-test.ttl file in the local repository
 
-### 3.3 Retrieve context as prompt from VOID
+### 3.3 Retrieve context as prompt from VOID -> Ontology Generation
 The generated void-test.ttl file was then uploaded back to the staging Virtuoso instance with a graph name "http://testVoid/voidGenerated"
 
-Then query against the graph with the SPARQL at the end of this README.md file, you can get result, such as the following represented in json format (or some other formats you specify at the SPARQL endpoint):
+Then query against the graph with the SPARQL at the end of this README.md file, you can get result, such as the following represented in json format (or some other formats you specify at the SPARQL endpoint. The output format can only be specified from the SPARQL endpoint instead of the SPARQL query interface in Virtuoso Conductor):
 
 ```json
 { "head": { "link": [], "vars": ["subjectClass", "prop", "objectClass", "objectDatatype"] },
@@ -97,6 +108,12 @@ Then query against the graph with the SPARQL at the end of this README.md file, 
 ```
 Refer to promptForConvertingVOID_toOntology.md, by providing which to LLMs, the ontology in OWL format can be generated
 
+### 3.4 A general analysis of ontology
+You can use 2 tools to analysize any generated ontology (OWL):
+#### 3.4.1 Protege - an ontology editing tool
+https://protege.stanford.edu/
+#### 3.4.2 WebVOWL - a pleasant ontology visualization tool
+https://github.com/VisualDataWeb/WebVOWL or http://www.usources.cn/ont. For the latter, you can click on "G.V" button of any ontology program's visualizaiton interface; then navigate along with the bottom options: "Ontology > Custom Ontology > Upload (your owl file)", so that you can render the visualization of your own ontology file (usually in turtle format)
 
 ## What about all the options?
 

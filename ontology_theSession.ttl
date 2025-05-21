@@ -1,0 +1,195 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix ts: <https://thesession.org/> .
+
+# Class definitions
+wd:Q482994 rdf:type owl:Class .
+wd:Q1569406 rdf:type owl:Class .
+wd:Q170412 rdf:type owl:Class .
+wd:Q1656682 rdf:type owl:Class .
+ts:sessions rdf:type owl:Class .
+
+# Object Properties
+ts:tunes rdf:type owl:ObjectProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (
+                      wd:Q482994
+                      wd:Q1569406
+                  )
+                ] ;
+    rdfs:range wd:Q170412 .
+
+# Data Properties
+ts:settingorder rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q1569406 ;
+    rdfs:range xsd:integer .
+
+wdt:P131 rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (
+                      ts:sessions
+                      wd:Q1656682
+                  )
+                ] ;
+    rdfs:range xsd:string .
+
+wdt:P625 rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (
+                      wd:Q1656682
+                      ts:sessions
+                  )
+                ] ;
+    rdfs:range xsd:string .
+
+wdt:P175 rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q482994 ;
+    rdfs:range [ rdf:type rdfs:Datatype ;
+                 owl:unionOf (
+                     xsd:string
+                     xsd:integer
+                 )
+               ] .
+
+wdt:P6375 rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (
+                      ts:sessions
+                      wd:Q1656682
+                  )
+                ] ;
+    rdfs:range [ rdf:type rdfs:Datatype ;
+                 owl:unionOf (
+                     xsd:integer
+                     xsd:string
+                 )
+               ] .
+
+wdt:P17 rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (
+                      wd:Q1656682
+                      ts:sessions
+                  )
+                ] ;
+    rdfs:range xsd:string .
+
+ts:tunebooks rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q170412 ;
+    rdfs:range xsd:integer .
+
+wdt:P826 rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q170412 ;
+    rdfs:range xsd:string .
+
+wdt:P3440 rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q170412 ;
+    rdfs:range xsd:string .
+
+wdt:P276 rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (
+                      ts:sessions
+                      wd:Q1656682
+                  )
+                ] ;
+    rdfs:range xsd:string .
+
+wdt:P658 rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q482994 ;
+    rdfs:range xsd:integer .
+
+wdt:P1625 rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q482994 ;
+    rdfs:range [ rdf:type rdfs:Datatype ;
+                 owl:unionOf (
+                     xsd:integer
+                     xsd:string
+                 )
+               ] .
+
+wdt:P2561 rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (
+                      ts:sessions
+                      wd:Q170412
+                      wd:Q1569406
+                      wd:Q482994
+                      wd:Q1656682
+                  )
+                ] ;
+    rdfs:range [ rdf:type rdfs:Datatype ;
+                 owl:unionOf (
+                     xsd:string
+                     xsd:integer
+                 )
+               ] .
+
+wdt:P585 rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (
+                      ts:sessions
+                      wd:Q1569406
+                      wd:Q170412
+                  )
+                ] ;
+    rdfs:range xsd:dateTime .
+
+wdt:P1114 rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q482994 ;
+    rdfs:range xsd:integer .
+
+wdt:P582 rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q1656682 ;
+    rdfs:range xsd:dateTime .
+
+wdt:P2894 rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (
+                      ts:sessions
+                      wd:Q170412
+                      wd:Q1656682
+                      wd:Q1569406
+                  )
+                ] ;
+    rdfs:range xsd:string .
+
+wdt:P136 rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q170412 ;
+    rdfs:range xsd:string .
+
+wdt:P554 rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (
+                      wd:Q1569406
+                      wd:Q170412
+                  )
+                ] ;
+    rdfs:range xsd:string .
+
+wdt:P742 rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q170412 ;
+    rdfs:range [ rdf:type rdfs:Datatype ;
+                 owl:unionOf (
+                     xsd:string
+                     xsd:integer
+                 )
+               ] .
+
+wdt:P580 rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Q1656682 ;
+    rdfs:range xsd:dateTime .
+
+# Properties without range specification
+ts:setting_id rdf:type owl:ObjectProperty ;
+    rdfs:domain wd:Q170412 .
+
+owl:sameAs rdf:type owl:ObjectProperty ;
+    rdfs:domain wd:Q482994 .
+
+ts:members rdf:type owl:ObjectProperty ;
+    rdfs:domain wd:Q1569406 .
