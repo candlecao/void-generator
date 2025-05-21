@@ -104,9 +104,10 @@ Refer to promptForConvertingVOID_toOntology.md, by providing which to LLMs, the 
 
 ### 3.4 A general analysis of ontology
 You can use 2 tools to analysize any generated ontology (OWL):
-#### 3.4.1 Protege
-#### 3.4.2 WebVOWL
-
+#### 3.4.1 Protege - an ontology editing tool
+https://protege.stanford.edu/
+#### 3.4.2 WebVOWL - a pleasant ontology visualization tool
+https://github.com/VisualDataWeb/WebVOWL or http://www.usources.cn/ont. For the latter, you can click on "G.V" button of any ontology program's visualizaiton interface; then navigate along with the bottom options: "Ontology > Custom Ontology > Upload (your owl file)", so that you can render the visualization of your own ontology file (usually in turtle format)
 
 ## What about all the options?
 
