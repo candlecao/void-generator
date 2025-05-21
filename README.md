@@ -53,8 +53,10 @@ java -jar target/void-generator-*uber.jar \
     -i "http://localhost:8890/.well-known/void" \
     -g "http://theSession"
 ```
+Upon execution, it will generate the VOID info in the file named "void-specific-graph.ttl". For subsequent steps, please refer to the following "3.3" about uploading back the VOID info file back to Virtuoso...
 
-The IRI is supposed to be the URL of the published location of the void file/service description.
+
+(The IRI is supposed to be the URL of the published location of the void file/service description.)
 
 ## 2. Running against a regular SPARQL endpoint
 
