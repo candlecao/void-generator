@@ -1,0 +1,552 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix : <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void_ext: <http://ldf.fi/void-ext#> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://localhost:8890/sparql> a :Service;
+  :defaultDataset <http://localhost:8890/sparql#sparql-default-dataset>;
+  :endpoint <http://localhost:8890/sparql>;
+  :resultFormat formats:SPARQL_Results_CSV, formats:SPARQL_Results_JSON, formats:N-Triples,
+    formats:RDF_XML, formats:SPARQL_Results_TSV, formats:Turtle, formats:SPARQL_Results_XML;
+  :supportedLanguage :SPARQL11Query;
+  :feature :UnionDefaultGraph, :BasicFederatedQuery;
+  :availableGraphs _:af9b310dad9946fc8ebf75089454d96b48 .
+
+<http://localhost:8890/sparql#sparql-default-dataset> a :Dataset;
+  :defaultGraph <http://localhost:8890/.well-known/void#sparql-default-graph>;
+  :namedGraph <http://theSession> .
+
+<http://localhost:8890/.well-known/void#sparql-default-graph> a :Graph;
+  void:triples "1876386"^^xsd:long;
+  void:distinctObjects "76688"^^xsd:long;
+  void_ext:distinctIRIReferenceObjects "76688"^^xsd:long;
+  void:distinctSubjects "109779"^^xsd:long;
+  void_ext:distinctIRIReferenceSubjects "109779"^^xsd:long .
+
+_:af9b310dad9946fc8ebf75089454d96b48 :namedGraph <http://theSession> .
+
+<http://theSession> a :NamedGraph;
+  :name <http://theSession>;
+  :graph <http://localhost:8890/.well-known/void#_graph_theSession!f6dee93a>;
+  void:subset <http://localhost:8890/.well-known/void#linkset_4f2ea4c0>, <http://localhost:8890/.well-known/void#linkset_034355d8> .
+
+<http://localhost:8890/.well-known/void#_graph_theSession!f6dee93a> a :Graph;
+  void:triples "1876386"^^xsd:long;
+  void:classes "5"^^xsd:long;
+  void:classPartition <http://localhost:8890/.well-known/void#theSession!da007aac!Q1569406>,
+    <http://localhost:8890/.well-known/void#theSession!53f6bf79!Q1656682>, <http://localhost:8890/.well-known/void#theSession!2cb9eff1!Q170412>,
+    <http://localhost:8890/.well-known/void#theSession!d444a889!Q482994>, <http://localhost:8890/.well-known/void#theSession!6e06bd13!sessions>;
+  void:propertyPartition <http://localhost:8890/.well-known/void#theSession!c74e2b73!type>,
+    <http://localhost:8890/.well-known/void#theSession!4534900f!sameAs>, <http://localhost:8890/.well-known/void#theSession!563b3483!P1114>,
+    <http://localhost:8890/.well-known/void#theSession!dd2c2e79!P131>, <http://localhost:8890/.well-known/void#theSession!d0c4423f!P136>,
+    <http://localhost:8890/.well-known/void#theSession!28aab4bd!P1625>, <http://localhost:8890/.well-known/void#theSession!26f461c7!P17>,
+    <http://localhost:8890/.well-known/void#theSession!989e51ae!P175>, <http://localhost:8890/.well-known/void#theSession!c821b2fe!P2561>,
+    <http://localhost:8890/.well-known/void#theSession!a6995220!P276>, <http://localhost:8890/.well-known/void#theSession!97660d78!P2894>,
+    <http://localhost:8890/.well-known/void#theSession!e371f0b0!P3440>, <http://localhost:8890/.well-known/void#theSession!fb1daa1b!P554>,
+    <http://localhost:8890/.well-known/void#theSession!94989a21!P580>, <http://localhost:8890/.well-known/void#theSession!6b6447fe!P582>,
+    <http://localhost:8890/.well-known/void#theSession!ec1b1371!P585>, <http://localhost:8890/.well-known/void#theSession!9fc8c32a!P625>,
+    <http://localhost:8890/.well-known/void#theSession!a92b1bbe!P6375>, <http://localhost:8890/.well-known/void#theSession!584cc5f3!P658>,
+    <http://localhost:8890/.well-known/void#theSession!0f02f497!P742>, <http://localhost:8890/.well-known/void#theSession!748b6d22!P826>,
+    <http://localhost:8890/.well-known/void#theSession!99463057!members>, <http://localhost:8890/.well-known/void#theSession!9f81840b!setting_id>,
+    <http://localhost:8890/.well-known/void#theSession!bae3b8fd!settingorder>, <http://localhost:8890/.well-known/void#theSession!dc1cb7cc!tunebooks>,
+    <http://localhost:8890/.well-known/void#theSession!d6bd416a!tunes>;
+  void:distinctObjects "350097"^^xsd:long;
+  void_ext:distinctLiterals "273409"^^xsd:long;
+  void_ext:distinctIRIReferenceObjects "76688"^^xsd:long;
+  void:distinctSubjects "109779"^^xsd:long;
+  void_ext:distinctIRIReferenceSubjects "109779"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!da007aac!Q1569406> a void:Dataset;
+  void:class <http://www.wikidata.org/entity/Q1569406>;
+  void:entities "71501"^^xsd:long;
+  void:propertyPartition <http://localhost:8890/.well-known/voidtheSession!6834430d!-Q1569406-P2561>,
+    <http://localhost:8890/.well-known/voidtheSession!c48012e8!-Q1569406-P2894>, <http://localhost:8890/.well-known/voidtheSession!4dd8e75f!-Q1569406-P554>,
+    <http://localhost:8890/.well-known/voidtheSession!b89deb86!-Q1569406-P585>, <http://localhost:8890/.well-known/voidtheSession!97b3d3b9!-Q1569406->,
+    <http://localhost:8890/.well-known/voidtheSession!525dbb10!-Q1569406-settingorder>,
+    <http://localhost:8890/.well-known/voidtheSession!c4600a20!-Q1569406-tunes> .
+
+<http://localhost:8890/.well-known/voidtheSession!6834430d!-Q1569406-P2561> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P2561>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!b9670859!-P2561-string>;
+  void:triples "177474"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!b9670859!-P2561-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!c48012e8!-Q1569406-P2894> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P2894>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!da0a3358!-P2894-string>;
+  void:triples "71501"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!da0a3358!-P2894-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!4dd8e75f!-Q1569406-P554> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P554>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!dc7a2b34!-P554-string>;
+  void:triples "71501"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!dc7a2b34!-P554-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!b89deb86!-Q1569406-P585> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P585>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!bad67266!-P585-dateTime>;
+  void:triples "71501"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!bad67266!-P585-dateTime> a void:Dataset;
+  void_ext:datatype xsd:dateTime .
+
+<http://localhost:8890/.well-known/voidtheSession!97b3d3b9!-Q1569406-> a void:Dataset;
+  void:property <https://thesession.org/members/>;
+  void:triples "71501"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!525dbb10!-Q1569406-settingorder>
+  a void:Dataset;
+  void:property <https://thesession.org/settingorder>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!06cba50c!-settingorder-integer>;
+  void:triples "178158"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!06cba50c!-settingorder-integer>
+  a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<http://localhost:8890/.well-known/voidtheSession!c4600a20!-Q1569406-tunes> a void:Dataset;
+  void:property <https://thesession.org/tunes>;
+  void:classPartition <http://localhost:8890/.well-known/voidtheSession!ef2dcd68!-Q1569406-tunes-Q170412>;
+  void:triples "178518"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!ef2dcd68!-Q1569406-tunes-Q170412>
+  a void:Dataset;
+  void:class <http://www.wikidata.org/entity/Q170412>;
+  void:triples "178518"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#linkset_4f2ea4c0> a void:Linkset;
+  void:linkPredicate <https://thesession.org/tunes>;
+  void:subjectsTarget <http://localhost:8890/.well-known/void#theSession!da007aac!Q1569406>;
+  void:objectsTarget <http://localhost:8890/.well-known/void#theSession!2cb9eff1!Q170412> .
+
+<http://localhost:8890/.well-known/void#theSession!53f6bf79!Q1656682> a void:Dataset;
+  void:class <http://www.wikidata.org/entity/Q1656682>;
+  void:entities "7356"^^xsd:long;
+  void:propertyPartition <http://localhost:8890/.well-known/voidtheSession!c04d0b2b!-Q1656682-P131>,
+    <http://localhost:8890/.well-known/voidtheSession!d6aa934c!-Q1656682-P17>, <http://localhost:8890/.well-known/voidtheSession!a5f9e230!-Q1656682-P2561>,
+    <http://localhost:8890/.well-known/voidtheSession!d85c90e4!-Q1656682-P276>, <http://localhost:8890/.well-known/voidtheSession!92aadfe5!-Q1656682-P2894>,
+    <http://localhost:8890/.well-known/voidtheSession!31788ca3!-Q1656682-P580>, <http://localhost:8890/.well-known/voidtheSession!5f1e0eea!-Q1656682-P582>,
+    <http://localhost:8890/.well-known/voidtheSession!9d6c48f7!-Q1656682-P625>, <http://localhost:8890/.well-known/voidtheSession!e8f3e877!-Q1656682-P6375> .
+
+<http://localhost:8890/.well-known/voidtheSession!c04d0b2b!-Q1656682-P131> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P131>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!2107dc7f!-P131-string>;
+  void:triples "13683"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!2107dc7f!-P131-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!d6aa934c!-Q1656682-P17> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P17>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!5dd99d73!-P17-string>;
+  void:triples "13788"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!5dd99d73!-P17-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!a5f9e230!-Q1656682-P2561> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P2561>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!b9670859!-P2561-string>;
+  void:triples "7356"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!d85c90e4!-Q1656682-P276> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P276>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!782aece2!-P276-string>;
+  void:triples "20678"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!782aece2!-P276-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!92aadfe5!-Q1656682-P2894> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P2894>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!da0a3358!-P2894-string>;
+  void:triples "9269"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!31788ca3!-Q1656682-P580> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P580>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!fd275104!-P580-dateTime>;
+  void:triples "7356"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!fd275104!-P580-dateTime> a void:Dataset;
+  void_ext:datatype xsd:dateTime .
+
+<http://localhost:8890/.well-known/voidtheSession!5f1e0eea!-Q1656682-P582> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P582>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!d43d22fa!-P582-dateTime>;
+  void:triples "7356"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!d43d22fa!-P582-dateTime> a void:Dataset;
+  void_ext:datatype xsd:dateTime .
+
+<http://localhost:8890/.well-known/voidtheSession!9d6c48f7!-Q1656682-P625> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P625>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!2dee0142!-P625-string>;
+  void:triples "6897"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!2dee0142!-P625-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!e8f3e877!-Q1656682-P6375> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P6375>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!3f9001a5!-P6375-integer>,
+    <http://localhost:8890/.well-known/voidtheSession!722049f2!-P6375-string>;
+  void:triples "5022"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!3f9001a5!-P6375-integer> a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<http://localhost:8890/.well-known/voidtheSession!722049f2!-P6375-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/void#theSession!2cb9eff1!Q170412> a void:Dataset;
+  void:class <http://www.wikidata.org/entity/Q170412>;
+  void:entities "21484"^^xsd:long;
+  void:propertyPartition <http://localhost:8890/.well-known/voidtheSession!8c08c067!-Q170412-P136>,
+    <http://localhost:8890/.well-known/voidtheSession!5e6d30f8!-Q170412-P2561>, <http://localhost:8890/.well-known/voidtheSession!7a35d8d8!-Q170412-P2894>,
+    <http://localhost:8890/.well-known/voidtheSession!a71fb2cd!-Q170412-P3440>, <http://localhost:8890/.well-known/voidtheSession!61a48e46!-Q170412-P554>,
+    <http://localhost:8890/.well-known/voidtheSession!c49365b5!-Q170412-P585>, <http://localhost:8890/.well-known/voidtheSession!2131789a!-Q170412-P742>,
+    <http://localhost:8890/.well-known/voidtheSession!2d3b720c!-Q170412-P826>, <http://localhost:8890/.well-known/voidtheSession!6121a6e8!-Q170412-setting_id>,
+    <http://localhost:8890/.well-known/voidtheSession!dda1b6d7!-Q170412-tunebooks> .
+
+<http://localhost:8890/.well-known/voidtheSession!8c08c067!-Q170412-P136> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P136>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!da50f79c!-P136-string>;
+  void:triples "42132"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!da50f79c!-P136-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!5e6d30f8!-Q170412-P2561> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P2561>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!ee77d364!-P2561-integer>,
+    <http://localhost:8890/.well-known/voidtheSession!b9670859!-P2561-string>;
+  void:triples "21484"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!ee77d364!-P2561-integer> a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<http://localhost:8890/.well-known/voidtheSession!7a35d8d8!-Q170412-P2894> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P2894>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!da0a3358!-P2894-string>;
+  void:triples "35550"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!a71fb2cd!-Q170412-P3440> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P3440>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!738e4ba4!-P3440-string>;
+  void:triples "42964"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!738e4ba4!-P3440-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!61a48e46!-Q170412-P554> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P554>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!dc7a2b34!-P554-string>;
+  void:triples "41027"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!c49365b5!-Q170412-P585> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P585>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!bad67266!-P585-dateTime>;
+  void:triples "48780"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!2131789a!-Q170412-P742> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P742>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!f92e30a3!-P742-integer>,
+    <http://localhost:8890/.well-known/voidtheSession!ee462479!-P742-string>;
+  void:triples "28263"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!f92e30a3!-P742-integer> a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<http://localhost:8890/.well-known/voidtheSession!ee462479!-P742-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!2d3b720c!-Q170412-P826> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P826>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!6c07b4ed!-P826-string>;
+  void:triples "50755"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!6c07b4ed!-P826-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!6121a6e8!-Q170412-setting_id> a
+    void:Dataset;
+  void:property <https://thesession.org/setting_id>;
+  void:triples "48785"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!dda1b6d7!-Q170412-tunebooks> a void:Dataset;
+  void:property <https://thesession.org/tunebooks>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!60af2522!-tunebooks-integer>;
+  void:triples "10811"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!60af2522!-tunebooks-integer> a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<http://localhost:8890/.well-known/void#theSession!d444a889!Q482994> a void:Dataset;
+  void:class <http://www.wikidata.org/entity/Q482994>;
+  void:entities "7495"^^xsd:long;
+  void:propertyPartition <http://localhost:8890/.well-known/voidtheSession!407f6ae8!-Q482994-sameAs>,
+    <http://localhost:8890/.well-known/voidtheSession!e9394bed!-Q482994-P1114>, <http://localhost:8890/.well-known/voidtheSession!177eb569!-Q482994-P1625>,
+    <http://localhost:8890/.well-known/voidtheSession!eff23382!-Q482994-P175>, <http://localhost:8890/.well-known/voidtheSession!75fd99b2!-Q482994-P2561>,
+    <http://localhost:8890/.well-known/voidtheSession!79344c5a!-Q482994-P658>, <http://localhost:8890/.well-known/voidtheSession!09aa7d54!-Q482994-tunes> .
+
+<http://localhost:8890/.well-known/voidtheSession!407f6ae8!-Q482994-sameAs> a void:Dataset;
+  void:property <http://www.w3.org/2002/07/owl#sameAs>;
+  void:triples "409"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!e9394bed!-Q482994-P1114> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P1114>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!bc29c68c!-P1114-integer>;
+  void:triples "24127"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!bc29c68c!-P1114-integer> a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<http://localhost:8890/.well-known/voidtheSession!177eb569!-Q482994-P1625> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P1625>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!b6edff4f!-P1625-integer>,
+    <http://localhost:8890/.well-known/voidtheSession!e6c1f1a0!-P1625-string>;
+  void:triples "189707"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!b6edff4f!-P1625-integer> a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<http://localhost:8890/.well-known/voidtheSession!e6c1f1a0!-P1625-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!eff23382!-Q482994-P175> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P175>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!f7853f3f!-P175-integer>,
+    <http://localhost:8890/.well-known/voidtheSession!3d0d35c0!-P175-string>;
+  void:triples "8188"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!f7853f3f!-P175-integer> a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<http://localhost:8890/.well-known/voidtheSession!3d0d35c0!-P175-string> a void:Dataset;
+  void_ext:datatype xsd:string .
+
+<http://localhost:8890/.well-known/voidtheSession!75fd99b2!-Q482994-P2561> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P2561>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!ee77d364!-P2561-integer>,
+    <http://localhost:8890/.well-known/voidtheSession!b9670859!-P2561-string>;
+  void:triples "7495"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!79344c5a!-Q482994-P658> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P658>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!a998b633!-P658-integer>;
+  void:triples "104181"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!a998b633!-P658-integer> a void:Dataset;
+  void_ext:datatype xsd:integer .
+
+<http://localhost:8890/.well-known/voidtheSession!09aa7d54!-Q482994-tunes> a void:Dataset;
+  void:property <https://thesession.org/tunes>;
+  void:classPartition <http://localhost:8890/.well-known/voidtheSession!2f96cc16!-Q482994-tunes-Q170412>;
+  void:triples "129183"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!2f96cc16!-Q482994-tunes-Q170412>
+  a void:Dataset;
+  void:class <http://www.wikidata.org/entity/Q170412>;
+  void:triples "129183"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#linkset_034355d8> a void:Linkset;
+  void:linkPredicate <https://thesession.org/tunes>;
+  void:subjectsTarget <http://localhost:8890/.well-known/void#theSession!d444a889!Q482994>;
+  void:objectsTarget <http://localhost:8890/.well-known/void#theSession!2cb9eff1!Q170412> .
+
+<http://localhost:8890/.well-known/void#theSession!6e06bd13!sessions> a void:Dataset;
+  void:class <https://thesession.org/sessions>;
+  void:entities "1943"^^xsd:long;
+  void:propertyPartition <http://localhost:8890/.well-known/voidtheSession!2d5f575d!-sessions-P131>,
+    <http://localhost:8890/.well-known/voidtheSession!ee52e8c2!-sessions-P17>, <http://localhost:8890/.well-known/voidtheSession!25981d8d!-sessions-P2561>,
+    <http://localhost:8890/.well-known/voidtheSession!7866e486!-sessions-P276>, <http://localhost:8890/.well-known/voidtheSession!4643894a!-sessions-P2894>,
+    <http://localhost:8890/.well-known/voidtheSession!6951b445!-sessions-P585>, <http://localhost:8890/.well-known/voidtheSession!f3c94319!-sessions-P625>,
+    <http://localhost:8890/.well-known/voidtheSession!51c60750!-sessions-P6375> .
+
+<http://localhost:8890/.well-known/voidtheSession!2d5f575d!-sessions-P131> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P131>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!2107dc7f!-P131-string>;
+  void:triples "3853"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!ee52e8c2!-sessions-P17> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P17>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!5dd99d73!-P17-string>;
+  void:triples "3876"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!25981d8d!-sessions-P2561> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P2561>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!ee77d364!-P2561-integer>,
+    <http://localhost:8890/.well-known/voidtheSession!b9670859!-P2561-string>;
+  void:triples "1943"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!7866e486!-sessions-P276> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P276>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!782aece2!-P276-string>;
+  void:triples "3866"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!4643894a!-sessions-P2894> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P2894>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!da0a3358!-P2894-string>;
+  void:triples "1943"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!6951b445!-sessions-P585> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P585>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!bad67266!-P585-dateTime>;
+  void:triples "1943"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!f3c94319!-sessions-P625> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P625>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!2dee0142!-P625-string>;
+  void:triples "1943"^^xsd:long .
+
+<http://localhost:8890/.well-known/voidtheSession!51c60750!-sessions-P6375> a void:Dataset;
+  void:property <http://www.wikidata.org/prop/direct/P6375>;
+  void_ext:datatypePartition <http://localhost:8890/.well-known/voidtheSession!3f9001a5!-P6375-integer>,
+    <http://localhost:8890/.well-known/voidtheSession!722049f2!-P6375-string>;
+  void:triples "1840"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!c74e2b73!type> void:property rdf:type;
+  void:triples "109779"^^xsd:long;
+  void:distinctSubjects "109779"^^xsd:long;
+  void:distinctObjects "5"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!4534900f!sameAs> void:property
+    <http://www.w3.org/2002/07/owl#sameAs>;
+  void:triples "409"^^xsd:long;
+  void:distinctSubjects "409"^^xsd:long;
+  void:distinctObjects "408"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!563b3483!P1114> void:property <http://www.wikidata.org/prop/direct/P1114>;
+  void:triples "24127"^^xsd:long;
+  void:distinctSubjects "7495"^^xsd:long;
+  void:distinctObjects "23"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!dd2c2e79!P131> void:property <http://www.wikidata.org/prop/direct/P131>;
+  void:triples "17536"^^xsd:long;
+  void:distinctSubjects "8840"^^xsd:long;
+  void:distinctObjects "4679"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!d0c4423f!P136> void:property <http://www.wikidata.org/prop/direct/P136>;
+  void:triples "42132"^^xsd:long;
+  void:distinctSubjects "21482"^^xsd:long;
+  void:distinctObjects "22"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!28aab4bd!P1625> void:property <http://www.wikidata.org/prop/direct/P1625>;
+  void:triples "189707"^^xsd:long;
+  void:distinctSubjects "7495"^^xsd:long;
+  void:distinctObjects "79594"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!26f461c7!P17> void:property <http://www.wikidata.org/prop/direct/P17>;
+  void:triples "17664"^^xsd:long;
+  void:distinctSubjects "8840"^^xsd:long;
+  void:distinctObjects "126"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!989e51ae!P175> void:property <http://www.wikidata.org/prop/direct/P175>;
+  void:triples "8188"^^xsd:long;
+  void:distinctSubjects "7495"^^xsd:long;
+  void:distinctObjects "4390"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!c821b2fe!P2561> void:property <http://www.wikidata.org/prop/direct/P2561>;
+  void:triples "215752"^^xsd:long;
+  void:distinctSubjects "109779"^^xsd:long;
+  void:distinctObjects "34124"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!a6995220!P276> void:property <http://www.wikidata.org/prop/direct/P276>;
+  void:triples "24544"^^xsd:long;
+  void:distinctSubjects "8840"^^xsd:long;
+  void:distinctObjects "3436"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!97660d78!P2894> void:property <http://www.wikidata.org/prop/direct/P2894>;
+  void:triples "118263"^^xsd:long;
+  void:distinctSubjects "102282"^^xsd:long;
+  void:distinctObjects "7"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!e371f0b0!P3440> void:property <http://www.wikidata.org/prop/direct/P3440>;
+  void:triples "42964"^^xsd:long;
+  void:distinctSubjects "21482"^^xsd:long;
+  void:distinctObjects "14"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!fb1daa1b!P554> void:property <http://www.wikidata.org/prop/direct/P554>;
+  void:triples "112528"^^xsd:long;
+  void:distinctSubjects "92983"^^xsd:long;
+  void:distinctObjects "10825"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!94989a21!P580> void:property <http://www.wikidata.org/prop/direct/P580>;
+  void:triples "7356"^^xsd:long;
+  void:distinctSubjects "7356"^^xsd:long;
+  void:distinctObjects "6503"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!6b6447fe!P582> void:property <http://www.wikidata.org/prop/direct/P582>;
+  void:triples "7356"^^xsd:long;
+  void:distinctSubjects "7356"^^xsd:long;
+  void:distinctObjects "6381"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!ec1b1371!P585> void:property <http://www.wikidata.org/prop/direct/P585>;
+  void:triples "122224"^^xsd:long;
+  void:distinctSubjects "94926"^^xsd:long;
+  void:distinctObjects "121955"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!9fc8c32a!P625> void:property <http://www.wikidata.org/prop/direct/P625>;
+  void:triples "8840"^^xsd:long;
+  void:distinctSubjects "8840"^^xsd:long;
+  void:distinctObjects "4550"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!a92b1bbe!P6375> void:property <http://www.wikidata.org/prop/direct/P6375>;
+  void:triples "6862"^^xsd:long;
+  void:distinctSubjects "6862"^^xsd:long;
+  void:distinctObjects "3419"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!584cc5f3!P658> void:property <http://www.wikidata.org/prop/direct/P658>;
+  void:triples "104181"^^xsd:long;
+  void:distinctSubjects "7495"^^xsd:long;
+  void:distinctObjects "99"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!0f02f497!P742> void:property <http://www.wikidata.org/prop/direct/P742>;
+  void:triples "28263"^^xsd:long;
+  void:distinctSubjects "8348"^^xsd:long;
+  void:distinctObjects "25448"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!748b6d22!P826> void:property <http://www.wikidata.org/prop/direct/P826>;
+  void:triples "50755"^^xsd:long;
+  void:distinctSubjects "21482"^^xsd:long;
+  void:distinctObjects "34"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!99463057!members> void:property
+    <https://thesession.org/members/>;
+  void:triples "71501"^^xsd:long;
+  void:distinctSubjects "71501"^^xsd:long;
+  void:distinctObjects "8450"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!9f81840b!setting_id> void:property
+    <https://thesession.org/setting_id>;
+  void:triples "48785"^^xsd:long;
+  void:distinctSubjects "21482"^^xsd:long;
+  void:distinctObjects "48785"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!bae3b8fd!settingorder> void:property
+    <https://thesession.org/settingorder>;
+  void:triples "178158"^^xsd:long;
+  void:distinctSubjects "71501"^^xsd:long;
+  void:distinctObjects "126"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!dc1cb7cc!tunebooks> void:property
+    <https://thesession.org/tunebooks>;
+  void:triples "10811"^^xsd:long;
+  void:distinctSubjects "10811"^^xsd:long;
+  void:distinctObjects "768"^^xsd:long .
+
+<http://localhost:8890/.well-known/void#theSession!d6bd416a!tunes> void:property <https://thesession.org/tunes>;
+  void:triples "307701"^^xsd:long;
+  void:distinctSubjects "78856"^^xsd:long;
+  void:distinctObjects "16116"^^xsd:long .
