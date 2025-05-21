@@ -1,3 +1,9 @@
+# A genearl introduction of "VoID-generator"
+1. VoID stands for "Vocabulary of Interlinked Datasets". It is a specification for describing the metadata of RDF datasets. For example, in our LinkedMusic datalake, various RDF graphs reside within one single SPARQL endpoint. VoID helps describe metadata for the different graphs and their interrelationships, aiding in datalake management and supporting NLQ2SPARQL workflows with LLMs, particularly for generating "federated SPARQL queries" (across different databases). 
+2. This is transferred from https://github.com/JervenBolleman/void-generator, which is referenced from the paper _LLM-based SPARQL Query Generation from Natural Language over Federated Knowledge Graphs_ (https://arxiv.org/abs/2410.06062).
+
+[Junjun Cao (junjun.cao@mail.mcgill.ca) commented]
+
 # A Detailed Statistics generator for a VoID file
 
 This CLI tool will automatically generates [VoID description](https://www.w3.org/TR/void/) as RDF for a public endpoint given its URL.
@@ -47,8 +53,10 @@ java -jar target/void-generator-*uber.jar \
     -i "http://localhost:8890/.well-known/void" \
     -g "http://theSession"
 ```
+Upon execution, it will generate the VOID info in the file named "void-specific-graph.ttl". For subsequent steps, please refer to the following "3.3" about uploading back the VOID info file back to Virtuoso...
 
-The IRI is supposed to be the URL of the published location of the void file/service description.
+
+(The IRI is supposed to be the URL of the published location of the void file/service description.)
 
 ## 2. Running against a regular SPARQL endpoint
 
